@@ -1219,6 +1219,33 @@ section {
     word-break: break-word;
   }
 }
+        .payment-icons{
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.payment-label{
+  font-size: 13px;
+  color: rgba(255,255,255,0.7); /* 黒フッター想定。白フッターなら色を#666とかに */
+}
+
+.payment-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-row img{
+  height: 20px;
+  width: auto;
+  opacity: 0.95;
+}
+
     </style>
 </head>
 <body>
@@ -1602,7 +1629,7 @@ section {
             <!-- 予約フォーム -->
             <div class="contact-form-wrapper">
                 <h3 style="text-align: center; margin-bottom: 30px; font-size: 24px; color: var(--text-primary);">予約フォーム</h3>
-                <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <form class="contact-form" action="https://formspree.io/f/https://formspree.io/f/mblnnybk" method="POST">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">お名前 <span class="required">*</span></label>
@@ -1680,14 +1707,27 @@ section {
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>天空の領域</h3>
-                    <p>横浜・関内の発毛促進サポート専門サロン</p>
-                </div>
+               <div class="footer-brand">
+  <img class="footer-logo" src="./img/tenku-rogo-master.png" alt="天空の領域">
+  <p>横浜・関内の発毛促進サポート専門サロン</p>
+</div>
                 <div class="footer-info">
                     <p>〒231-0012 神奈川県横浜市中区相生町4丁目65 ポラリス 9階</p>
                     <p>営業時間: 11:00-22:00（不定休）</p>
                 </div>
+                <div class="payment-icons">
+  <span class="payment-label">お支払い方法</span>
+  <div class="payment-row">
+    <img src="./img/payments/visa.svg" alt="Visa">
+    <img src="./img/payments/mastercard.svg" alt="Mastercard">
+    <img src="./img/payments/jcb.svg" alt="JCB">
+    <img src="./img/payments/amex.svg" alt="American Express">
+    <img src="./img/payments/paypay.svg" alt="PayPay">
+    <img src="./img/payments/rakutenpay.svg" alt="楽天ペイ">
+    <img src="./img/payments/linepay.svg" alt="LINE Pay">
+    <img src="./img/payments/aupay.svg" alt="au PAY">
+  </div>
+</div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 天空の領域 All Rights Reserved.</p>
