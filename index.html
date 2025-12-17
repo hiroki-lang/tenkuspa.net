@@ -1241,6 +1241,91 @@ section {
   margin-bottom: 12px;
   filter: brightness(0) invert(1); /* フッターが黒背景なら白っぽく見せる */
 }
+        /* ===== ビフォーアフター実績 ===== */
+.before-after{
+  background: var(--bg-white);
+}
+
+.ba-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.ba-card{
+  background: var(--bg-light);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.ba-images{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.ba-figure{
+  margin: 0;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.ba-figure img{
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.ba-figure figcaption{
+  font-size: 12px;
+  color: var(--text-secondary);
+  padding: 10px 12px;
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+.ba-meta{
+  margin-top: 14px;
+  padding: 0 6px 6px;
+}
+
+.ba-title{
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.ba-list{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.ba-note{
+  margin-top: 18px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* スマホ */
+@media (max-width: 768px){
+  .ba-grid{
+    grid-template-columns: 1fr;
+  }
+  .ba-figure img{
+    height: 200px;
+  }
+}
     </style>
 </head>
 <body>
@@ -1306,6 +1391,67 @@ section {
             </div>
         </div>
     </section>
+<!-- ビフォーアフター実績 -->
+<section class="before-after" id="results">
+  <div class="container">
+    <div class="section-title-wrapper">
+      <h2 class="section-title">ビフォーアフター実績</h2>
+      <div class="section-accent"></div>
+    </div>
+
+    <div class="ba-grid">
+      <!-- 1件目 -->
+      <article class="ba-card">
+        <div class="ba-images">
+          <figure class="ba-figure">
+            <img src="./img/ba_01_before.jpg" alt="ビフォー（事例01）">
+            <figcaption>Before</figcaption>
+          </figure>
+          <figure class="ba-figure">
+            <img src="./img/ba_01_after.jpg" alt="アフター（事例01）">
+            <figcaption>After</figcaption>
+          </figure>
+        </div>
+        <div class="ba-meta">
+          <p class="ba-title">事例01（40代）</p>
+          <ul class="ba-list">
+            <li>期間：3ヶ月</li>
+            <li>施術：全6回（ヘッドスパ＋エクソソーム）</li>
+            <li>ホームケア：あり</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 2件目 -->
+      <article class="ba-card">
+        <div class="ba-images">
+          <figure class="ba-figure">
+            <img src="./img/ba_02_before.jpg" alt="ビフォー（事例02）">
+            <figcaption>Before</figcaption>
+          </figure>
+          <figure class="ba-figure">
+            <img src="./img/ba_02_after.jpg" alt="アフター（事例02）">
+            <figcaption>After</figcaption>
+          </figure>
+        </div>
+        <div class="ba-meta">
+          <p class="ba-title">事例02（30代）</p>
+          <ul class="ba-list">
+            <li>期間：2ヶ月</li>
+            <li>施術：全4回</li>
+            <li>ホームケア：あり</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 必要なら増やしてOK -->
+    </div>
+
+    <p class="ba-note">
+      ※掲載写真はお客様の許諾を得て掲載しています。※効果には個人差があります。※写真の加工は行っていません（色味調整等を行う場合はその旨を明記）。
+    </p>
+  </div>
+</section>
 
     <!-- こんなお悩みありませんか -->
     <section class="concerns">
