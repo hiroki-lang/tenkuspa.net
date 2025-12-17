@@ -1199,7 +1199,26 @@ section {
     height: 280px;
   }
 }
+/* ===== スマホ：ヒーロータイトルのはみ出し防止（決定版） ===== */
+@media (max-width: 768px){
+  .hero-content{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 
+  .hero-title{
+    font-size: 30px;          /* 28〜32で微調整OK */
+    line-height: 1.25;
+    letter-spacing: 0.2px;    /* ★ここ重要：広いと即はみ出す */
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto 24px;
+    text-align: center;
+
+    overflow-wrap: anywhere;  /* どうしても長い時は折り返す */
+    word-break: break-word;
+  }
+}
     </style>
 </head>
 <body>
