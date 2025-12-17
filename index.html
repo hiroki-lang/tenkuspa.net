@@ -1127,6 +1127,79 @@ section {
         font-size: 18px;
     }
 }
+        /* =========================
+   スマホ：横スクロール完全封鎖
+========================= */
+@media (max-width: 768px){
+
+  html, body {
+    width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  /* 全体を画面内に収める */
+  section,
+  .container {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* transformが横にはみ出すのを防止 */
+  .approach-card,
+  .pricing-card,
+  .synergy-step,
+  .testimonial-card,
+  .feature-item {
+    transform: none !important;
+  }
+
+  /* 横幅100%超え防止 */
+  img,
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+}
+/* =========================
+   スマホ：アプローチの並び統一
+========================= */
+@media (max-width: 768px){
+
+  .approach-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .approach-card .approach-content {
+    order: 1;
+  }
+
+  .approach-card .approach-image {
+    order: 2;
+  }
+}
+/* =========================
+   フォーム幅 完全統一
+========================= */
+.contact-form-wrapper input,
+.contact-form-wrapper select,
+.contact-form-wrapper textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form-wrapper textarea {
+  min-height: 140px;
+}
+/* =========================
+   スマホ：Google Map 高さ調整
+========================= */
+@media (max-width: 768px){
+  .access-map iframe {
+    height: 280px;
+  }
+}
+
     </style>
 </head>
 <body>
