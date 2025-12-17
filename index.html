@@ -1245,7 +1245,12 @@ section {
   width: auto;
   opacity: 0.95;
 }
-
+.footer-logo{
+  height: 44px;
+  width: auto;
+  margin-bottom: 12px;
+  filter: brightness(0) invert(1); /* フッターが黒背景なら白っぽく見せる */
+}
     </style>
 </head>
 <body>
@@ -1629,7 +1634,7 @@ section {
             <!-- 予約フォーム -->
             <div class="contact-form-wrapper">
                 <h3 style="text-align: center; margin-bottom: 30px; font-size: 24px; color: var(--text-primary);">予約フォーム</h3>
-                <form class="contact-form" action="https://formspree.io/f/https://formspree.io/f/mblnnybk" method="POST">
+                <form class="contact-form" action="https://formspree.io/f/mblnnybk" method="POST">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">お名前 <span class="required">*</span></label>
