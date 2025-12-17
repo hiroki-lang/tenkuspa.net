@@ -1219,38 +1219,23 @@ section {
     word-break: break-word;
   }
 }
-        .payment-icons{
-  margin-top: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
+.footer-payments {
+  text-align: center;
+  margin-top: 24px;
 }
 
-.payment-label{
+.footer-payments-title {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #aaa;
+}
+
+.payment-text {
   font-size: 13px;
-  color: rgba(255,255,255,0.7); /* 黒フッター想定。白フッターなら色を#666とかに */
+  color: #ddd;
+  line-height: 1.6;
 }
 
-.payment-row{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 14px;
-  justify-content: center;
-  align-items: center;
-}
-
-.payment-row img{
-  height: 20px;
-  width: auto;
-  opacity: 0.95;
-}
-.footer-logo{
-  height: 44px;
-  width: auto;
-  margin-bottom: 12px;
-  filter: brightness(0) invert(1); /* フッターが黒背景なら白っぽく見せる */
-}
     </style>
 </head>
 <body>
@@ -1721,18 +1706,12 @@ section {
                     <p>営業時間: 11:00-22:00（不定休）</p>
                 </div>
             </div>
-            <div class="payment-icons">
-  <span class="payment-label">お支払い方法</span>
-  <div class="payment-row">
-    <img src="./img/payments/visa.svg" alt="Visa">
-    <img src="./img/payments/mastercard.svg" alt="Mastercard">
-    <img src="./img/payments/jcb.svg" alt="JCB">
-    <img src="./img/payments/amex.svg" alt="American Express">
-    <img src="./img/payments/paypay.svg" alt="PayPay">
-    <img src="./img/payments/rakutenpay.svg" alt="楽天ペイ">
-    <img src="./img/payments/linepay.svg" alt="LINE Pay">
-    <img src="./img/payments/aupay.svg" alt="au PAY">
-  </div>
+            <div class="footer-payments">
+  <p class="footer-payments-title">お支払い方法</p>
+  <p class="payment-text">
+    Visa / Mastercard / JCB / American Express<br>
+    PayPay / 楽天ペイ / LINE Pay / au PAY
+  </p>
 </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 天空の領域 All Rights Reserved.</p>
