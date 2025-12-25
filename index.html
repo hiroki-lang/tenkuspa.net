@@ -802,6 +802,13 @@ section { padding: 80px 0; }
     line-height: 1.85;
   }
 }
+    /* 実績見出し：スマホで4行を維持しやすく */
+.achievement-title{
+  font-size: clamp(20px, 4.8vw, 28px);
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
   </style>
 </head>
 
@@ -860,10 +867,11 @@ section { padding: 80px 0; }
       <div class="achievements-content">
         <div class="achievement-text achievement-center">
           <!-- 2枚目：改行を4行程度に -->
-         <h3 class="achievement-title tight-3lines">
+         <h3 class="achievement-title">
   15,000人以上のヘッドスパ施術で培った<br>
   サロンの毛髪ケア・診断実績<br>
-  一人ひとりの状態を見極めて確かな実績でサポートします
+  一人ひとりの状態を見極めて<br>
+  確かな実績でサポートします
 </h3>
           <p class="achievement-description">
             長年の経験と専門知識を持つ毛髪診断士が、一人ひとりの頭皮状態を丁寧に診断。<br>
