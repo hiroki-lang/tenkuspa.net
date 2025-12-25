@@ -1206,18 +1206,17 @@ section {
     padding-right: 16px;
   }
 
-  .hero-title{
-    font-size: 24px;          /* 28〜32で微調整OK */
-    line-height: 1.25;
-    letter-spacing: 0px;    /* ★ここ重要：広いと即はみ出す */
-    max-width: 100%;
-    padding: 0;
-    margin: 0 auto 24px;
-    text-align: center;
-
-    overflow-wrap: anywhere;  /* どうしても長い時は折り返す */
-    word-break: break-word;
-  }
+ .hero-title{
+  font-size: 24px;
+  line-height: 1.25;
+  letter-spacing: 0px;
+  max-width: 100%;
+  margin: 0 auto 24px;
+  text-align: center;
+  white-space: nowrap;          /* ★1行固定 */
+  overflow: hidden;
+  text-overflow: ellipsis;      /* ★入らない場合は … */
+}
 }
 .footer-payments {
   text-align: center;
@@ -1340,6 +1339,73 @@ section {
   border: 0;
   display: block;
 }
+        .hero-description{
+  font-size: 16px;      /* 18→16で3行に収めやすく */
+  line-height: 2.1;     /* 行間を少し広げる */
+  margin-bottom: 44px;
+}
+        .achievement-center{
+  text-align: center;
+}
+.achievement-points-center{
+  display: inline-block;
+  text-align: left;         /* 中央配置しつつ、箇条書きは読みやすく左寄せ */
+  margin: 0 auto;
+}
+        .ba-badge{
+  display: inline-block;
+  padding: 4px 10px;
+  margin-right: 8px;
+  border-radius: 999px;
+  background: rgba(143,168,184,.18);
+  color: var(--primary-dark);
+  font-weight: 700;
+  letter-spacing: .05em;
+}
+.ba-title{
+  font-weight: 700;
+  font-size: 18px;   /* 16→18で目立たせる */
+}
+        .section-title-1line{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 480px){
+  .section-title-1line{ font-size: 24px; } /* 小さめにして1行維持 */
+}
+        .section-title-center{ text-align:center; }
+        .synergy-result-title{
+  font-size: 28px;
+  line-height: 1.35;
+  text-align: center;
+  margin-bottom: 18px;
+}
+@media (max-width: 480px){
+  .synergy-result-title{ font-size: 24px; }
+}
+        .feature-title-1line{
+  white-space: nowrap;
+}
+        @media (max-width: 768px){
+  .achievements-content,
+  .features-grid,
+  .testimonial-grid,
+  .pricing-cards{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .container{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* 影やtransformが原因の見切れを抑える */
+  *{
+    max-width: 100%;
+  }
+}
     </style>
 </head>
 <body>
@@ -1366,7 +1432,7 @@ section {
         <div class="container">
             <div class="hero-content">
                 <p class="hero-subtitle">横浜・関内 発毛促進サポート専門サロン</p>
-                <h2 class="hero-title">エクソソーム×ヘッドスパで<br>新しい発毛促進サポート体験</h2>
+                <h2 class="hero-title">エクソソーム×ヘッドスパで新しい発毛促進サポート体験</h2>
                 <p class="hero-description">
                     累計15,000人以上の頭皮を診断した毛髪診断士が、<br>
                     最先端のエクソソーム療法と極上のヘッドスパで、<br>
@@ -1387,18 +1453,24 @@ section {
                 <div class="section-accent"></div>
             </div>
             <div class="achievements-content">
-                <div class="achievement-text">
-                    <h3 class="achievement-title">15,000人以上のヘッドスパ施術をしてきた<br>サロンの毛髪ケア、診断実績</h3>
-                    <p class="achievement-description">
-                        長年の経験と専門知識を持つ毛髪診断士が、一人ひとりの頭皮状態を丁寧に診断。<br>
-                        お客様の髪質や頭皮環境に合わせた最適なケアプランをご提案いたします。
-                    </p>
-                    <ul class="achievement-points">
-                        <li>✓ ヘッドスパ実績 15,000人突破</li>
-                        <li>✓ お客様満足度 96%</li>
-                        <li>✓ 平均30日で変化を実感</li>
-                    </ul>
-                </div>
+                <div class="achievement-text achievement-center">
+  <h3 class="achievement-title">
+    15,000人以上のヘッドスパ施術をしてきた<br>
+    サロンの毛髪ケア、診断実績<br>
+    確かな実績でサポートします
+  </h3>
+
+  <p class="achievement-description">
+    長年の経験と専門知識を持つ毛髪診断士が、一人ひとりの頭皮状態を丁寧に診断。<br>
+    お客様の髪質や頭皮環境に合わせた最適なケアプランをご提案いたします。
+  </p>
+
+  <ul class="achievement-points achievement-points-center">
+    <li>✓ ヘッドスパ実績 15,000人突破</li>
+    <li>✓ お客様満足度 96%</li>
+    <li>✓ 平均30日で変化を実感</li>
+  </ul>
+</div>
                 <div class="achievement-image">
                     <img src="./img/salon-0319.jpg.jpg" alt="毛髪診断士による丁寧なカウンセリング">
                 </div>
@@ -1427,7 +1499,7 @@ section {
           </figure>
         </div>
         <div class="ba-meta">
-          <p class="ba-title">事例01（40代）</p>
+         <p class="ba-title"><span class="ba-badge">事例➀</span>（40代）</p>
           <ul class="ba-list">
             <li>期間：3ヶ月</li>
             <li>施術：全6回（ヘッドスパ＋エクソソーム）</li>
@@ -1449,7 +1521,7 @@ section {
           </figure>
         </div>
         <div class="ba-meta">
-          <p class="ba-title">事例02（30代）</p>
+          <p class="ba-title"><span class="ba-badge">事例➁</span>（30代）</p>
           <ul class="ba-list">
             <li>期間：2ヶ月</li>
             <li>施術：全4回</li>
@@ -1471,7 +1543,7 @@ section {
     <section class="concerns">
         <div class="container">
             <div class="section-title-wrapper">
-                <h2 class="section-title">こんなお悩みありませんか？</h2>
+                <h2 class="section-title section-title-1line">こんなお悩みありませんか？</h2>
                 <div class="section-accent"></div>
             </div>
             <div class="concerns-chat">
@@ -1575,7 +1647,9 @@ section {
     <section class="synergy">
         <div class="container">
             <div class="section-title-wrapper">
-                <h2 class="section-title">3つのアプローチの相乗効果</h2>
+               <h2 class="section-title section-title-center">
+  3つのアプローチの<br>相乗効果
+</h2>
                 <div class="section-accent"></div>
             </div>
             <div class="synergy-intro">
@@ -1601,7 +1675,11 @@ section {
                 </div>
             </div>
             <div class="synergy-result">
-                <h3 class="synergy-result-title">継続的な発毛促進サポート環境の実現</h3>
+               <h3 class="synergy-result-title">
+  継続的な<br>
+  発毛促進サポート環境<br>
+  の実現
+</h3>
                 <p class="synergy-result-description">
                     3つのアプローチを組み合わせることで、頭皮環境の改善から細胞活性化、そして日々のケアまで、<br>
                     トータルで髪のお悩みをサポートする総合的なアプローチを実現します。
@@ -1679,7 +1757,7 @@ section {
                     </p>
                 </div>
                 <div class="feature-item">
-                    <h3 class="feature-title">サポート体制</h3>
+                    <h3 class="feature-title feature-title-1line">サポート体制</h3>
                     <p class="feature-description">
                         施術後のホームケアまで、一人ひとりに寄り添った継続的なサポートを提供します。
                     </p>
