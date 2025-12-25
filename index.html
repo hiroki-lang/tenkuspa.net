@@ -772,6 +772,36 @@ section { padding: 80px 0; }
 
   .section-title-1line { font-size: 24px; }
 }
+    /* =========================
+   指定修正（スマホ文字詰まり対応）
+========================= */
+
+/* 1枚目：実績タイトルを3行に収める（スマホ優先） */
+.achievement-title.tight-3lines{
+  font-size: 28px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px){
+  .achievement-title.tight-3lines{
+    font-size: 20px;     /* 小さくして3行に収めやすく */
+    line-height: 1.45;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+  }
+}
+
+/* 4枚目：相乗効果ボックスの説明を6行に収めやすく */
+.synergy-result-description.tight-6lines{
+  line-height: 1.9;
+}
+
+@media (max-width: 768px){
+  .synergy-result-description.tight-6lines{
+    font-size: 14px;     /* 行数を安定させる */
+    line-height: 1.85;
+  }
+}
   </style>
 </head>
 
@@ -830,13 +860,11 @@ section { padding: 80px 0; }
       <div class="achievements-content">
         <div class="achievement-text achievement-center">
           <!-- 2枚目：改行を4行程度に -->
-          <h3 class="achievement-title">
-            15,000人以上のヘッドスパ施術で培った<br>
-            サロンの毛髪ケア・診断実績<br>
-            一人ひとりの状態を見極めて<br>
-            確かな実績でサポートします
-          </h3>
-
+         <h3 class="achievement-title tight-3lines">
+  15,000人以上のヘッドスパ施術で培った<br>
+  サロンの毛髪ケア・診断実績<br>
+  一人ひとりの状態を見極めて確かな実績でサポートします
+</h3>
           <p class="achievement-description">
             長年の経験と専門知識を持つ毛髪診断士が、一人ひとりの頭皮状態を丁寧に診断。<br>
             髪質や頭皮環境に合わせて、無理なく続けられるケアプランをご提案いたします。
@@ -996,7 +1024,7 @@ section { padding: 80px 0; }
           </div>
           <div class="approach-content">
             <span class="approach-number">アプローチ 02</span>
-            <h3 class="approach-title">ホームケアで既存の髪を維持</h3>
+            <h3 class="approach-title">ホームケアで<br>既存の髪を維持</h3>
             <p class="approach-description">
               毛髪診断士が一人ひとりに合わせたホームケアプランをご提案。今ある髪を守りながら、最適なケアを継続していただけます。
             </p>
@@ -1012,7 +1040,7 @@ section { padding: 80px 0; }
         <div class="approach-card">
           <div class="approach-content">
             <span class="approach-number">アプローチ 03</span>
-            <h3 class="approach-title">エクソソームで細胞活性化</h3>
+            <h3 class="approach-title">エクソソームで<br>細胞活性化</h3>
             <p class="approach-description">
               最先端のエクソソーム療法で、頭皮の細胞レベルからアプローチ。毛髪の成長をサポートし、発毛促進環境を整えます。
             </p>
@@ -1068,18 +1096,19 @@ section { padding: 80px 0; }
 
       <div class="synergy-result">
         <!-- 5枚目：タイトルを2行 -->
-        <h3 class="synergy-result-title">
-          継続的な発毛促進サポート環境<br>の実現
-        </h3>
-
+       <h3 class="synergy-result-title">
+  継続的な<br>
+  発毛促進サポート環境の実現
+</h3>
         <!-- 5枚目：説明を違和感なく短くして「5行」相当に -->
-        <p class="synergy-result-description">
-          3つのアプローチを組み合わせ、<br>
-          頭皮環境を整えるところから細胞活性化までを一貫サポート。<br>
-          さらに日々のホームケアで効果を維持し、<br>
-          変化を積み重ねられる状態をつくります。<br>
-          “続けられる仕組み”で髪のお悩みに寄り添います。
-        </p>
+        <p class="synergy-result-description tight-6lines">
+  3つのアプローチを組み合わせ、<br>
+  頭皮環境を整えるところから<br>
+  細胞活性化までを一貫サポート。<br>
+  さらに日々のホームケアで効果を維持し、<br>
+  変化を積み重ねられる状態をつくります。<br>
+  <strong>続けられる仕組み</strong>で髪のお悩みに寄り添います。
+</p>
       </div>
     </div>
   </section>
