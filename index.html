@@ -914,6 +914,52 @@ section { padding: 80px 0; }
   .bundle-old{ font-size: 22px; }
   .bundle-new{ font-size: 40px; }
 }
+    /* ===== モニター価格：旧→新（bundle） ===== */
+.pricing-price--bundle{
+  margin: 18px 0 10px;
+  text-align: center;
+}
+
+.bundle-row{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.bundle-label{
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.bundle-old{
+  font-size: 26px;
+  font-weight: 800;
+  color: #888;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: rgba(255, 77, 77, .7);
+}
+
+.bundle-row--new .bundle-label{
+  color: #ff4d4d;
+}
+
+.bundle-new{
+  font-size: 40px;
+  font-weight: 900;
+  color: #ff4d4d;
+  text-shadow: 0 2px 8px rgba(255, 107, 107, 0.25);
+}
+
+.bundle-note{
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
+
   </style>
 </head>
 
@@ -1369,7 +1415,7 @@ section { padding: 80px 0; }
           <p class="pricing-note">※初回のみカウンセリング時間が延長になる場合がございます</p>
         </div>
 
-       <!-- モニター -->
+      <!-- モニター -->
 <div class="pricing-card pricing-card-featured">
 
   <div class="pricing-header">
@@ -1378,13 +1424,13 @@ section { padding: 80px 0; }
     <p class="pricing-duration">約90分の施術</p>
   </div>
 
-  <!-- ★今回限定：2行バナー（1〜2枚目のやつ） -->
+  <!-- 今回限定：2行バナー -->
   <div class="limited-notice">
     <span class="limited-line1">今回限定‼</span>
     <span class="limited-line2">残り5枠｜1/20まで</span>
   </div>
 
-  <!-- ★価格表示（1〜2枚目の構成に寄せる） -->
+  <!-- 価格表示（旧価格→新価格） -->
   <div class="pricing-price pricing-price--bundle">
     <div class="bundle-row">
       <span class="bundle-label">全6回</span>
@@ -1397,7 +1443,7 @@ section { padding: 80px 0; }
     <div class="bundle-note">※3ヶ月集中プラン（全6回）</div>
   </div>
 
-  <!-- ★モニター価格：説明を“通常コース形式”に -->
+  <!-- 説明（1,2枚目の粒度に寄せる） -->
   <div class="pricing-detail-section">
     <h4>◆カウンセリング（毛髪診断士在籍サロン）</h4>
     <ul>
