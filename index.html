@@ -809,6 +809,59 @@ section { padding: 80px 0; }
   text-align: center;
   letter-spacing: 0.04em;
 }
+/* =========================
+   今回限定バナー（モニター用）
+========================= */
+.limited-notice{
+  margin: 8px auto 14px;      /* ←上の余白を小さく、下も詰める */
+  padding: 16px 22px;
+  max-width: 320px;           /* ←PCでも見栄え良く */
+  text-align: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ff6b6b, #ff4d4d);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(255, 77, 77, 0.35);
+}
+
+.limited-line1{
+  display: block;
+  font-size: 18px;            /* ←目立たせる */
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+}
+
+.limited-line2{
+  display: inline-block;      /* ←中身に合わせて丸く */
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.2;
+  background: rgba(255,255,255,0.22);
+  padding: 8px 14px;
+  border-radius: 999px;
+}
+
+/* モニター側：上の余白が空きすぎるのを詰める */
+.pricing-card-featured .pricing-header{
+  margin-bottom: 10px;        /* ←ここが効く */
+}
+
+/* 価格ブロックの上も詰めたい場合 */
+.pricing-card-featured .pricing-price{
+  margin-top: 6px;
+}
+
+/* スマホ最適化 */
+@media (max-width: 768px){
+  .limited-notice{
+    margin: 10px auto 14px;
+    max-width: 320px;
+  }
+}
+@media (max-width: 480px){
+  .limited-line1{ font-size: 19px; }
+  .limited-line2{ font-size: 16px; }
 }
   </style>
 </head>
@@ -1267,13 +1320,18 @@ section { padding: 80px 0; }
 
         <!-- モニター -->
         <div class="pricing-card pricing-card-featured">
-          <div class="pricing-badge">今回限定！</div>
+  <div class="pricing-header">
+    <h3 class="pricing-title">モニター特別価格</h3>
+    <p class="pricing-subtitle">3ヶ月集中プラン（全6回）</p>
+    <p class="pricing-duration">約90分の施術</p>
+  </div>
 
-          <div class="pricing-header">
-            <h3 class="pricing-title">モニター特別価格</h3>
-            <p class="pricing-subtitle">3ヶ月集中プラン（全6回）</p>
-            <p class="pricing-duration">約90分の施術</p>
-          </div>
+  <!-- ★今回限定（2行で目立つ） -->
+  <div class="limited-notice">
+    <span class="limited-line1">今回限定!!</span>
+    <span class="limited-line2">残り5枠｜1/20まで</span>
+  </div>
+
 
           <div class="pricing-price">
             <div class="price-amount-featured">¥58,000</div>
